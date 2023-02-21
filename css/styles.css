@@ -659,7 +659,37 @@ width: calc((100% - 48px) / 3);
     background: var(--color-hover);
     fill: var(--background-white-color);
 }
-
+.checklist-action{
     
+    width: 360px;
+    margin-top: 72px;
+    margin-left: auto;
+    margin-right: auto;
 
+}
+.checklist {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+     color: #2E2F42;
+}
+    
+.check-btn {
+    width: 169px;
+    height: 56px;
+    color: var(--background-white-color);
+    background: var(--color-accent);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: transparent;
 
+}
+textarea {
+    width: 360px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+}
