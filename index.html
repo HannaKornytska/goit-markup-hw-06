@@ -412,7 +412,7 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop " data-modal>
       <di class="modal">
         <button type="button" class="modal-btn" data-modal-close>
           <svg class="modal-svg" width="8" height="8">
@@ -420,22 +420,57 @@
           </svg>
         </button>
 
-       
-          <form class="checklist-action">
-            <b class="checklist"
+       <b class="modal-title"
               >Leave your contacts and we will call you back</b
             >
-            <label for="Name" name="Name">Name</label>
-            <input type="text" name="name" id="Name" autofocus>
-            <label for="tel" name="tel">Phone</label>
-            <input type="tel" name="tel" id="tel">
-            <label for="email" name="email">Email</label>
-            <input type="text" name="email" id="email">
-            <label for="comment" name="comment">Comment</label>
-            <textarea name="comment" id="comment" placeholder="Text input"></textarea>
+          <form class="checklist-action">
+          <label class="modal-label">
+              <span class="modal-name" >Name</span>
+              <input 
+              class="modal-input"
+              type="text" 
+              name="name"
+              autofocus
+              >
+              <svg class="modal-icon" width="22" height="24">
+                <use href="./images/icons.svg#icon-Frame"></use>
+              </svg>
+          </label>
+            
+          <label class="modal-label">
+              <span class="modal-name" >Phone</span>
+            <input 
+            class="modal-input"
+            type="tel"
+            name="tel">
+            <svg class="modal-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone-blackp"></use>
+              </svg>
+          </label>
+            
+            <label class="modal-label">
+              <span class="modal-name" >Email</span>
+              <input 
+              class="modal-input"
+              type="email"
+              name="email" >
+              <svg class="modal-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email-black"></use>
+              </svg>
+            </label>
+            
+            <label class="modal-label">
+              <span class="modal-name" >Comment</span>
+              <textarea name="comment" placeholder="Text input"
+              ></textarea>
+            </label>
+            
 
-            <input type="checkbox" name="" id="policy">
-            <label for="policy">I accept the terms and conditions of the Privacy Policy</label>
+            <input class="modal-check"  type="checkbox" name="" id="policy">
+            <div class="check-wrapp"><span class="check-box"></span></div>
+            <label class="modal-checkbox" for="policy" >I accept the terms and conditions of the 
+              <span class="policy">Privacy Policy</span>
+            </label>
 
 
 
