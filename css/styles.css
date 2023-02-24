@@ -660,12 +660,7 @@ width: calc((100% - 48px) / 3);
     background: var(--color-hover);
     fill: var(--background-white-color);
 }
-.checklist-action{
-    
-    
-   
 
-}
 .modal-title {
     display: block;
     margin-top: 48px;
@@ -676,19 +671,30 @@ width: calc((100% - 48px) / 3);
     letter-spacing: 0.02em;
      color: #2E2F42;
 }
-.modal-label {
+.modal-wrap {
     display: block;
     position: relative;
     margin: 0;
     
 }
 .modal-input {
+    display: block;
     width: 100%;
     height: 40px;
-    
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     background-color: transparent;
+    transition: border-color var(--color-accent) var(--hover-transition),
+    fill var(--color-accent) var(--hover-transition);
+    
+}
+.modal-input:focus,
+.modal-input:hover {
+    border-color: var(--color-accent);
+}
+.modal-input:focus + .modal-icon,
+.modal-input:hover + .modal-icon {
+    fill: var(--color-accent);
 }
 .modal-name {
     display: block;
@@ -702,11 +708,11 @@ width: calc((100% - 48px) / 3);
 } 
 .modal-icon {
     position: absolute;
-    top: 0;
-    left: 16px;
-    transform: translateY(100%);
-   
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%); 
 }
+
 .check-btn {
     display: block;
     margin: 24px auto;
@@ -733,13 +739,22 @@ textarea {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none;
+    transition: border-color var(--color-accent) var(--hover-transition); 
 }
+textarea:focus,
+textarea:hover {
+    border-color: var(--color-accent);
+}
+
 .policy {
     color: var(--color-accent);
     text-decoration: underline;
 }
 
 .modal-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 24px;
     font-weight: 400;
     font-size: 12px;
     line-height: calc(14 / 12);
@@ -748,23 +763,31 @@ textarea {
     
 }
 .modal-check {
-    appearance: none ;
     position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(0) ;
     
-}
-.check-wrapp {
-    position: relative;
-}
-.modal-checkbox {
-    padding-left: 24px;
 }
 .check-box {
     position: absolute;
+    left: 0;
+    top: 0;
     width: 16px;
     height: 16px;
-    top: 0;
-    left: 0;
-    transform: translateY(25%) ;
+    transform: translate(0) ;
+
     border: 1.25px solid #2E2F42;
     border-radius: 2px;
+}
+
+
+.hidden {
+    
+            appearance: none;
+
+
+}
+.modal-check:checked + .check-box{
+    background-color: var(--color-accent);
 }
